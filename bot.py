@@ -156,4 +156,5 @@ async def new_round(ctx):
 # ---------------------------
 # Run the bot (replace YOUR_TOKEN_HERE with your bot's token)
 # ---------------------------
-bot.run("MTM1NTUxMDk0ODUyNTM3NTU2OA.GlQ0dA.r6mnjxgU5LuwI7tv2kHCzIbZy9Kvw-oYjQkpiE")
+import os
+bot.run(os.environ["TOKEN"])
