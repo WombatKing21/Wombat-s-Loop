@@ -1,10 +1,6 @@
 import discord
 from discord.ext import commands
 import random
-import os
-
-PORT = os.getenv('PORT', 8000)
-app.run(host='0.0.0.0', port=PORT)
 
 # Enable member intents so the bot can see who's in the server.
 intents = discord.Intents.default()
@@ -156,5 +152,4 @@ async def new_round(ctx):
 # ---------------------------
 # Run the bot (replace YOUR_TOKEN_HERE with your bot's token)
 # ---------------------------
-import os
-bot.run(os.environ["TOKEN"])
+bot.run("MTM1NTUxMDk0ODUyNTM3NTU2OA.GlQ0dA.r6mnjxgU5LuwI7tv2kHCzIbZy9Kvw-oYjQkpiE")
