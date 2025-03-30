@@ -1,6 +1,10 @@
 import discord
 from discord.ext import commands
 import random
+import os
+
+PORT = os.getenv('PORT', 8000)
+app.run(host='0.0.0.0', port=PORT)
 
 # Enable member intents so the bot can see who's in the server.
 intents = discord.Intents.default()
