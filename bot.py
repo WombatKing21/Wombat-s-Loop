@@ -35,7 +35,7 @@ game_state = {
     # Each tuple is structured as (question for non-imposters, corresponding question for the imposter).
     "question_pairs": [
         ("What is your the most underrated movie?", "What is the worst movie you've watched?"),
-		("What animal would you want by your side during the apocolypse?", "What is the most random medium-large land animal?")
+		("What animal would you want by your side during the apocolypse?", "What is the most random medium-large land animal?"),
 		("Craziest place you've wanked?", "Most romantic spot to go on a date?"),
 		("How many urinals away from another person do you go, counting the gaps?", "Pick a number from 0-8"),
 		("What height would you be if you could pick any? In cm", "If you had to choose your girlfriends height, what would she be?"),
