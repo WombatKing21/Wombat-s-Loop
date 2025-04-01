@@ -18,20 +18,52 @@ game_state = {
     "theme": None,       # Current theme (e.g., "animals", "movies", etc.)
     "mode": None,        # Game mode: 1 for words mode, 2 for questions mode
     "imposter": None,    # The chosen imposter for the round
+    "last_question_pair": None,  # The last selected question pair for game mode 2
     # Dictionary for theme words.
     # Replace the example words with your own. For custom themes, add your own key and list.
     "theme_words": {
         "animals": ["lion", "tiger", "penguin", "seal", "elephant", "giraffe", "zebra", "kangaroo", "koala", "bear", "cheetah", "leopard", "wolf", "fox", "crocodile", "hippopotamus", "rhinoceros", "camel", "donkey", "horse", "cow", "sheep", "goat", "pig", "chicken", "duck", "goose", "turkey", "ostrich", "emu", "flamingo", "peacock", "parrot", "eagle", "hawk", "falcon", "owl", "bat", "squirrel", "rabbit", "mouse", "rat", "hamster", "guinea pig", "otter", "beaver", "raccoon", "skunk", "deer", "moose", "elk", "bison", "buffalo", "antelope", "lemur", "chimpanzee", "orangutan", "baboon", "macaw", "toucan", "seagull", "walrus", "narwhal", "dolphin", "whale", "shark", "octopus", "jellyfish", "starfish", "crab", "lobster", "shrimp", "snail", "turtle", "tortoise", "lizard", "snake", "frog", "toad", "newt", "salamander", "crow", "raven", "sparrow", "robin", "woodpecker", "hummingbird", "swan", "pigeon", "dove", "badger", "hedgehog", "porcupine", "armadillo", "sloth", "llama", "alpaca", "yak", "ferret", "mole"],
-        "movies": ["Inception", "The Shawshank Redemption", "The Godfather", "The Dark Knight"],
-        "actors": ["Sydney Sweeney", "Johnny Depp", "Leonardo DiCaprio", "Tom Cruise"],
-        "food": ["Pizza", "Burger", "Sushi", "Pasta", "Tacos", "Sandwich", "Fried Chicken", "Ice Cream", "Steak", "French Fries", "Chocolate", "Cheeseburger", "Ramen", "Hot Dog", "Donut", "Nachos", "Salad", "Burrito", "Curry", "Lasagna", "Chicken Wings", "Dumplings", "Pancakes", "Waffles", "Quesadilla", "Mac and Cheese", "Spaghetti", "Spring Rolls", "Pho", "BBQ Ribs", "Bagel", "Croissant", "Apple Pie", "Grilled Cheese", "Chicken Nuggets", "Samosa", "Meatballs", "Churros", "Falafel", "Onion Rings", "Mashed Potatoes", "Tuna Sandwich", "Fajitas", "Pad Thai", "Lobster", "Shrimp", "Omelette", "Gnocchi", "Pita", "Tortilla", "Schnitzel", "Fish and Chips", "Peking Duck", "Kimchi", "Banh Mi", "Clam Chowder", "Gyoza", "Tofu", "Miso Soup", "Tempura", "Crepe", "Pudding", "Goulash", "Pierogi", "Jambalaya", "Beef Stew", "Stuffed Peppers", "Pork Belly", "Beef Wellington", "Risotto", "Tiramisu", "Chili", "Meatloaf", "Ceviche", "Enchiladas", "Shepherd's Pie", "Eggs Benedict", "Frittata", "Biryani", "Shawarma", "Hummus", "Tabbouleh", "Cornbread", "Ravioli", "Sushi Roll", "Muffin", "Bruschetta", "Deviled Eggs", "Sloppy Joe", "Ziti", "Cannoli", "Turkey", "Ham", "Beef Jerky", "Crab Cakes", "Pork Chops", "Scallops", "Mussels", "Calamari", "Tartar", "Coleslaw", "Guacamole", "Chips", "Popcorn", "Cereal", "Toast", "Yogurt", "Granola", "Smoothie", "Milkshake", "Brownies", "Cupcake", "Cake", "Cookies", "Pretzel", "Trail Mix", "Fruit Salad", "Watermelon", "Pineapple", "Strawberries", "Blueberries", "Banana", "Apple", "Orange", "Grapes", "Peach", "Mango", "Papaya", "Avocado", "Lychee", "Dragonfruit", "Passionfruit", "Kiwifruit", "Tomato", "Cucumber", "Carrot", "Corn", "Zucchini", "Broccoli", "Cauliflower", "Spinach", "Kale", "Green Beans", "Peas", "Bell Pepper", "Mushrooms", "Eggplant", "Artichoke", "Brussels Sprouts", "Beetroot", "Radish", "Leeks", "Asparagus", "Pumpkin", "Sweet Potato", "Potato", "Rice", "Quinoa", "Couscous", "Barley", "Oats", "Lentils", "Chickpeas", "Black Beans", "Red Beans", "Naan", "Roti", "Chapati", "Paratha", "Tandoori Chicken", "Saag Paneer", "Paneer Tikka", "Vindaloo", "Korma", "Dal", "Rogan Josh", "Butter Chicken", "Chicken Tikka", "Malai Kofta", "Aloo Gobi", "Chana Masala", "Pakora", "Idli", "Dosa", "Uttapam", "Vada", "Sambar", "Momo", "Yakitori", "Okonomiyaki", "Tonkatsu", "Takoyaki", "Udon", "Soba", "Chow Mein", "Lo Mein", "Egg Rolls", "Orange Chicken", "Sesame Chicken", "General Tso's Chicken", "Kung Pao Chicken", "Beef and Broccoli", "Sweet and Sour Pork", "Fried Rice", "Sticky Rice", "Mongolian Beef", "Mapo Tofu", "Bulgogi", "Bibimbap", "Japchae", "Galbi", "Kimchi Stew", "Tteokbokki", "Sundae", "Hoddeok", "Kimbap", "Sopapilla", "Tamales", "Chilaquiles", "Elote", "Pozole", "Menudo", "Tostada", "Arroz con Pollo", "Carne Asada", "Mole", "Empanada", "Arepa", "Feijoada", "Moqueca", "Pastel", "Coxinha", "Acarajé", "Chimichurri", "Matambre", "Milanesa", "Asado", "Poutine", "Beavertail", "Tourtière", "Butter Tart", "Nanaimo Bar", "Pho Bo", "Bun Cha", "Bun Bo Hue", "Com Tam", "Hu Tieu", "Xoi", "Cha Gio", "Banh Xeo", "Banh Cuon", "Banh Bao", "Banh Flan", "Banh Ran", "Kebabs", "Dolma", "Manti", "Baklava", "Halva", "Kofta", "Shakshuka", "Tagine", "Harira", "Couscous Salad", "Bastilla", "Fufu", "Jollof Rice", "Egusi Soup", "Suya", "Chapati", "Injera", "Doro Wat", "Kitfo", "Nyama Choma", "Matoke", "Boerewors", "Bobotie", "Bunny Chow", "Vetkoek", "Peri Peri Chicken", "Pavlova", "Meat Pie", "Sausage Roll", "Lamington", "Tim Tam", "Vegemite", "Damper", "Fairy Bread", "Chicken Parmigiana", "Beef Pie", "Fish Pie", "Cornish Pasty", "Eton Mess", "Sticky Toffee Pudding", "Toad in the Hole", "Yorkshire Pudding", "Black Pudding", "Bubble and Squeak", "Welsh Rarebit", "Cullen Skink", "Irish Stew", "Boxty", "Colcannon", "Soda Bread", "Bangers and Mash", "Scones", "Trifle", "Clotted Cream", "Crumpet"],
-        "custom": ["dog", "jack"],
+        "movies": ["Inception", "The Shawshank Redemption", "The Godfather", "The Dark Knight", "Pulp Fiction", "Fight Club", "Forrest Gump", "The Matrix", "Interstellar", "The Lord of the Rings: The Return of the King", "The Empire Strikes Back", "Star Wars: A New Hope", "The Lord of the Rings: The Fellowship of the Ring", "The Lord of the Rings: The Two Towers", "The Prestige", "Gladiator", "Memento", "The Departed", "The Social Network", "The Avengers", "Jurassic Park", "Titanic", "Avatar", "Back to the Future", "The Lion King", "Braveheart", "Schindler's List", "Goodfellas", "Se7en", "Saving Private Ryan", "The Green Mile", "The Silence of the Lambs", "Casablanca", "One Flew Over the Cuckoo's Nest", "City of God", "American Beauty", "The Wolf of Wall Street", "Whiplash", "Parasite", "Joker", "Avengers: Endgame", "Avengers: Infinity War", "Django Unchained", "Mad Max: Fury Road", "Inglourious Basterds", "The Truman Show", "Toy Story", "Toy Story 3", "Finding Nemo", "Up", "WALL-E", "Coco", "Inside Out", "Ratatouille", "Spirited Away", "Your Name", "Oldboy", "The Sixth Sense", "A Beautiful Mind", "The Shining", "Blade Runner 2049", "Logan", "Deadpool", "Guardians of the Galaxy", "The Incredibles", "Monsters, Inc.", "Shutter Island", "Arrival", "Her", "La La Land", "Moonlight", "The Revenant", "12 Years a Slave", "Room", "Brooklyn", "The Big Short", "Birdman", "No Country for Old Men", "There Will Be Blood", "Requiem for a Dream", "The Grand Budapest Hotel", "The Hateful Eight", "Once Upon a Time in Hollywood", "Spotlight", "The Imitation Game", "Argo", "The King's Speech", "Slumdog Millionaire", "The Curious Case of Benjamin Button", "Life of Pi", "The Fighter", "Hugo", "The Aviator", "Black Swan", "The Martian", "Doctor Strange", "Captain America: The Winter Soldier", "Iron Man", "Shazam!", "Wonder Woman"],
+        "actors": ["Sydney Sweeney", "Johnny Depp", "Leonardo DiCaprio", "Tom Cruise", "Brad Pitt", "Angelina Jolie", "Denzel Washington", "Scarlett Johansson", "Jennifer Lawrence", "Robert Downey Jr.", "Chris Hemsworth", "Natalie Portman", "George Clooney", "Kate Winslet", "Hugh Jackman", "Keanu Reeves", "Emma Stone", "Ryan Reynolds", "Morgan Freeman", "Viola Davis", "Sandra Bullock", "Matt Damon", "Anne Hathaway", "Joaquin Phoenix", "Ben Affleck", "Tom Hanks", "Gal Gadot", "Samuel L. Jackson", "Nicole Kidman", "Christian Bale", "Emma Watson", "Bradley Cooper", "Zoe Saldana", "Channing Tatum", "Zac Efron", "Alicia Vikander", "Margot Robbie", "Idris Elba", "Saoirse Ronan", "Michael Fassbender", "Emily Blunt", "Jake Gyllenhaal", "Michelle Williams", "Ryan Gosling", "Julianne Moore", "Daniel Craig", "Eddie Redmayne", "Kristen Stewart", "Lupita Nyong'o", "Chiwetel Ejiofor", "Amy Adams", "Tessa Thompson", "Daniel Kaluuya", "Rami Malek", "Zendaya", "John Boyega", "Regina King", "Octavia Spencer", "Liam Neeson", "Chris Pratt", "Mila Kunis", "Chloe Grace Moretz", "Shailene Woodley", "Dakota Johnson", "Timothée Chalamet", "Anya Taylor-Joy", "Florence Pugh", "John Krasinski", "Constance Wu", "Awkwafina", "Elizabeth Olsen", "Olivia Colman", "Andrew Garfield", "Cillian Murphy", "Michael B. Jordan", "Seth Rogen", "Paul Rudd", "Karen Gillan", "Elizabeth Debicki", "Taron Egerton", "Javier Bardem", "Penélope Cruz", "Eva Green", "Gemma Chan", "Oscar Isaac", "Daniel Radcliffe", "Emma Thompson", "Benedict Cumberbatch", "Joe Alwyn", "Benicio Del Toro", "Robert Pattinson", "Elizabeth Banks", "Zoë Kravitz", "Cara Delevingne", "Hailee Steinfeld", "Lily James", "Henry Cavill", "Chris Evans"],
+        "food": ["Pizza", "Burger", "Sushi", "Pasta", "Tacos", "Sandwich", "Fried Chicken", "Ice Cream", "Steak", "French Fries", "Chocolate", "Cheeseburger", "Ramen", "Hot Dog", "Donut", "Nachos", "Salad", "Burrito", "Curry", "Lasagna", "Chicken Wings", "Dumplings", "Pancakes", "Waffles", "Quesadilla", "Mac and Cheese", "Spaghetti", "Spring Rolls", "Pho", "BBQ Ribs", "Bagel", "Croissant", "Apple Pie", "Grilled Cheese", "Chicken Nuggets"],
+        "carey": ["Ryan W", "Louis LG", "Jack K", "Jacob Z", "Morris RL", "Justin W", "Bobby", "Ange W", "Jack A", "Penghui", "Oliver L", "Grayson", "Sam Simon", "Willem N", "Leon Y", "Dominic", "Leonard L", "Silas C", "Hamish M", "Nicolas M", "Josh M", "Cameron T", "Callum W", "Thisal S", "Leo T", "Scott H"],
+		"splus": ["Leo S", "Louis LG", "Finn G", "Alec A", "Matt A", "Josh M", "Kath P", "Macca", "Oven", "Valan", "James G", "Tim L", "Leon Y", "Lachlan C"],
+		"countries": ["United States", "China", "India", "United Kingdom", "Germany", "France", "Italy", "Spain", "Canada", "Australia", "Brazil", "Russia", "Japan", "Mexico", "South Korea", "Indonesia", "Saudi Arabia", "Turkey", "Netherlands", "Switzerland", "Sweden", "Belgium", "Norway", "Austria", "Poland", "South Africa", "Argentina", "Ireland", "Singapore", "New Zealand", "Denmark", "Malaysia", "Israel", "Finland", "Portugal", "Greece", "Czech Republic", "Hungary", "Thailand", "Egypt", "Philippines", "Colombia", "Vietnam", "Romania", "Ukraine", "Chile", "Peru", "Pakistan", "Iraq", "Kazakhstan", "Morocco", "Algeria", "Lebanon", "Qatar", "Kuwait", "Oman", "Bahrain", "Slovakia", "Slovenia", "Croatia", "Serbia", "Bulgaria", "Estonia", "Latvia", "Lithuania", "Iceland", "Luxembourg", "Cyprus", "Malta", "Jordan", "Sri Lanka", "Nepal", "Bangladesh", "Myanmar", "Uzbekistan", "Belarus", "Azerbaijan", "Georgia", "Armenia", "Afghanistan", "Sudan", "Ethiopia", "Kenya", "Tanzania", "Uganda", "Ghana", "Cameroon", "Angola", "Zimbabwe", "Bolivia", "Ecuador", "Paraguay", "Uruguay", "Venezuela", "Costa Rica", "Panama", "Dominican Republic", "Fiji"],
+		"custom": ["dog", "jack"],
     },
     # List of question pairs for gamemode 2.
     # Each tuple is structured as (question for non-imposters, corresponding question for the imposter).
     "question_pairs": [
-        ("What is your favourite movie?", "What is the scariest movie you've watched?"),
-        # <-- Enter your own pairs here.
+        ("What is your the most underrated movie?", "What is the worst movie you've watched?"),
+		("What animal would you want by your side during the apocolypse?", "What is the most random medium-large land animal?")
+		("Craziest place you've wanked?", "Most romantic spot to go on a date?")
+		("How many urinals away from another person do you go, counting the gaps?", "Pick a number from 0-8")
+		("What height would you be if you could pick any? In cm", "If you had to choose your girlfriends height, what would she be?"),
+		("What would you rate your attractiveness out of 10?", "Pick a number from 4-10"),
+		("If you could transform into any animal, what would it be?", "What is the stupidest animal?"),
+		("What TV show would you show your kids?", "Best TV show you've seen in the last few years"),
+		("How long do you stay in bed after you wake up when you have nowhere to be?", "Pick a time between 3 minutes and 3 hours"),
+		("What is the most amount of time you've wanked in a day?", "Pick a number between 4-10"),
+		("What celebrity would you want to be stuck on a deserted island with?", "Name the worst celebrity you know"),
+		("Who is the baddest celebrity?", "Name a black celebrity who is the opposite gender to yourself"),
+		("What is the most romantic thing you can say to someone?", "Favourite quote?"),
+		("Favourite quote?", "Most outrageous sentence you can think of"),
+		("If you could have any superpower, what would it be?", "Best superpower to commit crimes"),
+		("What's your go-to karaoke song?", "What's the most overrated song?"),
+		("What's your go-to emoji?", "Most overused emoji that actually sucks?"),
+		("What's your ideal hangout spot?", "What's the most awkward place you've been caught ?"),
+		("What are you most excited for in university?", "What is the best sex position?"),
+		("What country would you most want to visit?", "What is the most dangerous country in the world?"),
+		("What is your ideal date?", "What is the best gooning spot?"),
+		("What's the best item to have in a zombie apocolypse?", "Whats the worst gift to receive?"),
+		("How much have you spent on Onlyfans or other websites", "Pick a number from 1-10"),
+		("Safest time of day to go out", "Best time to rob someone"),
+		("Best pickup line", "Best line to gross out a person of the opposite gender"),
+		("What's your favorite way to chill after a wild night?", "What's the most scandalous thing you've done in a public spot?"),
+		("Ideally, how much younger would you want your girlfriend to be?", "Pick a number from 2-5"),
+		("Where would you go if you could teleport anywhere?", "Best place to beat up someone without getting caught?"),
+		("Age when you first gooned", "Pick a number from 7-15"),
+		("What is your comfort food?", "Favouite body part"),
     ]
 }
 
@@ -129,8 +161,9 @@ async def start_game(ctx):
         if not game_state["question_pairs"]:
             await ctx.send("No question pairs available. Please add them in the code.")
             return
-        # Choose a random pair from the list.
+        # Choose a random pair from the list and store it for later reference.
         question_pair = random.choice(game_state["question_pairs"])
+        game_state["last_question_pair"] = question_pair
         for player in game_state["players"]:
             try:
                 if player == imposter:
@@ -141,15 +174,30 @@ async def start_game(ctx):
                 await ctx.send(f"Could not send DM to {player.mention}.")
 
 # ---------------------------
+# Command: Reveal the non-imposter question (Game Mode 2 only)
+# ---------------------------
+@bot.command(name="reveal")
+async def reveal_question(ctx):
+    if game_state["mode"] != 2:
+        await ctx.send("Reveal command is only applicable for Game Mode 2.")
+        return
+    if not game_state.get("last_question_pair"):
+        await ctx.send("No question has been set for this round yet.")
+        return
+    question_for_non_imposters = game_state["last_question_pair"][0]
+    await ctx.send(f"The question given to non-imposters was: **{question_for_non_imposters}**")
+
+# ---------------------------
 # Command: Start a new round
 # ---------------------------
 @bot.command(name="new_round")
 async def new_round(ctx):
-    # Instead of clearing players, only reset the imposter.
+    # Instead of clearing players, only reset the imposter and the last question pair.
     game_state["imposter"] = None
+    game_state["last_question_pair"] = None
     await ctx.send("New round started! Current players are still in the game. Use `!start` to begin the round.")
 
 # ---------------------------
-# Run the bot (replace YOUR_TOKEN_HERE with your bot's token)
+# Run the bot (replace the token with your bot's token)
 # ---------------------------
 bot.run("MTM1NTUxMDk0ODUyNTM3NTU2OA.GlQ0dA.r6mnjxgU5LuwI7tv2kHCzIbZy9Kvw-oYjQkpiE")
