@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+from keep_alive import keep_alive
 import random
 
 # Enable member intents so the bot can see who's in the server.
@@ -38,7 +39,7 @@ game_state = {
 		("What animal would you want by your side during the apocolypse?", "What is the most random medium-large land animal?"),
 		("Craziest place you've wanked?", "Most romantic spot to go on a date?"),
 		("How many urinals away from another person do you go, counting the gaps?", "Pick a number from 0-8"),
-		("What height would you be if you could pick any? In cm", "If you had to choose your girlfriends height, what would she be? In cm"),
+		("What height would you be if you could pick any? In cm", "If you had to choose your girlfriends height, what would she be?"),
 		("What would you rate your attractiveness out of 10?", "Pick a number from 4-10"),
 		("If you could transform into any animal, what would it be?", "What is the stupidest animal?"),
 		("What TV show would you show your kids?", "Best TV show you've seen in the last few years"),
@@ -200,4 +201,5 @@ async def new_round(ctx):
 # ---------------------------
 # Run the bot (replace the token with your bot's token)
 # ---------------------------
+keep_alive()
 bot.run("MTM1NTUxMDk0ODUyNTM3NTU2OA.GlQ0dA.r6mnjxgU5LuwI7tv2kHCzIbZy9Kvw-oYjQkpiE")
