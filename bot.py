@@ -91,6 +91,28 @@ async def leave_game(ctx):
         await ctx.send(f"{ctx.author.mention}, you are not currently in the game.")
 
 # ---------------------------
+# Command: Kick all players from the game
+# ---------------------------
+@bot.command(name="kickall")
+async def kick_all(ctx):
+    game_state["players"].clear()
+    await ctx.send("All players have been kicked from the game.")
+
+# ---------------------------
+# Command: Kick a specific player (Owner only)
+# ---------------------------
+@bot.command(name="kick")
+async def kick_player(ctx, member: discord.Member):
+    if ctx.author.id != ctx.guild.owner_id:
+        await ctx.send("Only the server owner can use this command.")
+        return
+    if member in game_state["players"]:
+        game_state["players"].remove(member)
+        await ctx.send(f"{member.mention} has been kicked from the game.")
+    else:
+        await ctx.send(f"{member.mention} is not in the game.")
+
+# ---------------------------
 # Command: Set the theme
 # ---------------------------
 @bot.command(name="set_theme")
@@ -122,12 +144,13 @@ async def start_game(ctx):
     if len(game_state["players"]) < 3:
         await ctx.send("Need at least **3 players** to start the game.")
         return
-    # Ensure a theme and mode have been selected.
-    if game_state["theme"] is None:
-        await ctx.send("Theme not set. Use `!set_theme <theme>` to set one.")
-        return
+    # Ensure game mode is selected.
     if game_state["mode"] is None:
         await ctx.send("Game mode not set. Use `!set_mode <1 or 2>` to set a mode.")
+        return
+    # For gamemode 1, ensure a theme is selected.
+    if game_state["mode"] == 1 and game_state["theme"] is None:
+        await ctx.send("Theme not set. Use `!set_theme <theme>` to set one.")
         return
 
     # Randomly select one player to be the imposter.
@@ -157,6 +180,7 @@ async def start_game(ctx):
     # -------------------------------------
     # Gamemode 2: Each non-imposter gets one question,
     # and the imposter gets a corresponding (different) question.
+    # (Note: No theme is required for gamemode 2)
     # -------------------------------------
     elif game_state["mode"] == 2:
         if not game_state["question_pairs"]:
@@ -168,7 +192,7 @@ async def start_game(ctx):
         for player in game_state["players"]:
             try:
                 if player == imposter:
-                    await player.send(f"You are the **imposter**! Your question is: **{question_pair[1]}**")
+                    await player.send(f"Your question is: **{question_pair[1]}**")
                 else:
                     await player.send(f"Your question is: **{question_pair[0]}**")
             except Exception as e:
