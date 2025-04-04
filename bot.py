@@ -1,4 +1,5 @@
 import discord
+import os
 from discord.ext import commands
 from keep_alive import keep_alive
 import random
@@ -226,4 +227,4 @@ async def new_round(ctx):
 # Run the bot (replace the token with your bot's token)
 # ---------------------------
 keep_alive()
-bot.run("MTM1NTUxMDk0ODUyNTM3NTU2OA.GlQ0dA.r6mnjxgU5LuwI7tv2kHCzIbZy9Kvw-oYjQkpiE")
+bot.run(os.getenv("bot_token"))
