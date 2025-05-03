@@ -52,7 +52,7 @@ game_state = {
         ("If you could have any superpower, what would it be?", "Best superpower to commit crimes"),
         ("What's your go-to karaoke song?", "What's the most overrated song?"),
         ("What's your go-to emoji?", "Most overused emoji that actually sucks?"),
-        ("What's your ideal hangout spot?", "What's the most awkward place you've been caught ?"),
+        ("What's your ideal hangout spot?", "What's the most awkward place you've been caught?"),
         ("What are you most excited for in university?", "What is the best sex position?"),
         ("What country would you most want to visit?", "What is the most dangerous country in the world?"),
         ("What is your ideal date?", "What is the best gooning spot?"),
@@ -65,6 +65,9 @@ game_state = {
         ("Where would you go if you could teleport anywhere?", "Best place to beat up someone without getting caught?"),
         ("Age when you first gooned", "Pick a number from 7-15"),
         ("What is your comfort food?", "What is an exotic, 'rich' type food?"),
+        ("What's the most scandalous thing you've done in a public spot?", "What's your favorite way to chill after a wild night?"),
+        ("What's the most awkward place you've been caught?", "What's your ideal hangout spot?"),
+
     ]
 }
 
