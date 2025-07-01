@@ -94,6 +94,8 @@ game_state = {
         ("How many days can you go without eating?", "Pick a range between 7-21?"),
         ("Best age to retire?", "Pick a number between 30-70"),
         ("What age do you want to have kids?", "Pick a number between 24-36"),
+        ("how many 10-year-olds could you take in a fight?", "Pick a number between 10-100"),
+        ("What athlete could you beat at their sport?", "Pick a female athlete"),
         ("What's the most awkward place you've been caught?", "What's your ideal hangout spot?"),
 
     ]
