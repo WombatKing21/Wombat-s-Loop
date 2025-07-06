@@ -113,7 +113,7 @@ game_state = {
         ("What movie character do you feel is most similar to you?", "Which character has the best arc in television?"),
         ("What body part are you most proud of?", "Pick a random body part"),
         ("If you could gain the abilities of any animal, which animal would it be?", "What animal are you irrationally afraid of?"),
-        ("If you could go back in time and tell your 10 year old self one thing, what would it be?", "What one thing would you tell a dog if it could understand you?")
+        ("If you could go back in time and tell your 10 year old self one thing, what would it be?", "What one thing would you tell a dog if it could understand you?"),
         ("Where would you hide buried treasure?", "What is the most recent park you have been to?"),
         ("Who, out of those you are playing with, is the most likely to become an actor?", "Who is the worst liar out of those you are playing with?"),
         ("What sport do you believe you are the best at among the people present?", "What is a sport you haven’t played but think you’d be good at?"),
