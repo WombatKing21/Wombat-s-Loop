@@ -44,7 +44,7 @@ game_state = {
         ("If you could transform into any animal, what would it be?", "What is the stupidest animal?"),
         ("What TV show would you show your kids?", "Best TV show you've seen in the last few years"),
         ("How long do you stay in bed after you wake up when you have nowhere to be?", "Pick a time between 3 minutes and 3 hours"),
-        ("What is the most amount of time you've wanked in a day?", "Pick a number between 4-10"),
+        ("What is the most amount of times you've wanked in a day?", "Pick a number between 4-10"),
         ("What celebrity would you want to be stuck on a deserted island with?", "Who is the baddest celebrity?"),
         ("Who is the baddest celebrity?", "Name a adult actor"),
         ("What is the most romantic thing you can say to someone?", "Favourite quote?"),
@@ -97,6 +97,7 @@ game_state = {
         ("how many 10-year-olds could you take in a fight?", "Pick a number between 10-100"),
         ("What athlete could you beat at their sport?", "Pick a female athlete"),
         ("What's the most awkward place you've been caught?", "What's your ideal hangout spot?"),
+        ("At what age do you think you will die?", "Pick a number between 20 and 120"),
 
     ]
 }
