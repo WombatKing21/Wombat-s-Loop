@@ -40,7 +40,7 @@ game_state = {
         ("Craziest place you've wanked?", "Most romantic spot to go on a date?"),
         ("How many urinals away from another person do you go, counting the gaps?", "Pick a number from 0-8"),
         ("What height would you be if you could pick any? In cm", "If you had to choose your girlfriends height, what would she be? In cm"),
-        ("What would you rate your attractiveness out of 10?", "Pick a number from 4-10"),
+        ("What would you rate your attractiveness out of 10?", "Pick a number from 3-10"),
         ("If you could transform into any animal, what would it be?", "What is the stupidest animal?"),
         ("What TV show would you show your kids?", "Best TV show you've seen in the last few years"),
         ("How long do you stay in bed after you wake up when you have nowhere to be?", "Pick a time between 3 minutes and 3 hours"),
@@ -98,6 +98,24 @@ game_state = {
         ("What athlete could you beat at their sport?", "Pick a female athlete"),
         ("What's the most awkward place you've been caught?", "What's your ideal hangout spot?"),
         ("At what age do you think you will die?", "Pick a number between 20 and 120"),
+        ("At what age did you first tell a non-family member 'I love you'?", "When did you first open your bank account"),
+        ("Including yourself, what's the perfect amount of siblings in a family?", "What is the ideal amount of close friends?"),
+        ("How many countries have you been to?", "Pick a number between 5 and 40"),
+        ("What is the best city in Australia", "Which major Australian city is the most irrelevant?"),
+        ("What is a city you would like to visit?", "Which city do you think is overrated?"),
+        ("If you could talk to animals, which animal would you want to communicate with first?", "What is the craziest pet you would own?"),
+        ("How many songs are in your favourite playlist?", "How many hours do you have on your favourite video game?"),
+        ("Who, out of the people you are playing with, will die first?", "Choose a random person from those you are playing with"),
+        ("What is the best name to give a dog?", "What is the worst male name?"),
+        ("Which movie or show makes you cry the most?", "What is your favourite childhood movie or show?"),
+        ("What job would you be best suited for?", "What is the most niche job that requires a very specific skilset?"),
+        ("What was the dumbest reason why you got in trouble?", "What was the most nefarious thing you have done, but got away with?"),
+        ("What movie character do you feel is most similar to you?", "Which character has the best arc in television?"),
+        ("What body part are you most proud of?", "Pick a random body part"),
+        ("If you could gain the abilities of any animal, which animal would it be?", "What animal are you irrationally afraid of?"),
+        ("If you could go back in time and tell your 10 year old self one thing, what would it be?", "What one thing would you tell a dog if it could understand you?")
+        ("Where would you hide buried treasure?", "What is the most recent park you have been to?"),
+        ("Who, out of those you are playing with, is the most likely to become an actor?", "Who is the worst liar out of those you are playing with?"),
 
     ]
 }
