@@ -116,6 +116,24 @@ game_state = {
         ("If you could go back in time and tell your 10 year old self one thing, what would it be?", "What one thing would you tell a dog if it could understand you?")
         ("Where would you hide buried treasure?", "What is the most recent park you have been to?"),
         ("Who, out of those you are playing with, is the most likely to become an actor?", "Who is the worst liar out of those you are playing with?"),
+        ("What sport do you believe you are the best at among the people present?", "What is a sport you haven’t played but think you’d be good at?"),
+        ("What is the most embarrassing moment of your life?", "What situation would be the most embarrassing to be in?"),
+        ("What is your favourite movie of all time?", "Name a critically acclaimed movie that you didn’t think was as good as people said it was"),
+        ("What is your favourite video game of all time?", "What video game do you think has been the most influential to gaming?"),
+        ("Who do you respect the most in the world?", "Who Would you chose to swap lives with?"),
+        ("How old do you think you’ll be when you get married?", "Pick a number between 24-35"),
+        ("What is the best birthday gift for a significant other?", "What do you think is an overrated birthday gift?"),
+        ("What is an appropriate age to stop sleeping with stuffed animals?", "Pick a number between 6-14"),
+        ("Who among us would most likely end up in jail?", "Pick a random person among those you’re playing with"),
+        ("Who among you is most likely to die first?", "Pick a random person among you"),
+        ("Who among you is most likely to become a billionaire?", "Who among you is most likely to end up broke?"),
+        ("What do you think is your best physical feature?", "What is a body part you’re mildly self-conscious of?"),
+        ("What is a sport you think is fun to play but boring to watch?", "Name the sport you think is the most entertaining to watch live"),
+        ("Who is most likely to spend 2 hours getting ready?", "Name a person among those you’re playing with"),
+        ("If you could have chosen any other country to have grown up in where would you choose?", "Pick a random country that is not Australia"),
+        ("How many songs are in your playlist?", "Pick a number between 40-300"),
+        ("How much do you think you should spend on a birthday present for a close friend?", "Pick a range between $25-125"),
+
 
     ]
 }
