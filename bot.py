@@ -310,4 +310,4 @@ async def new_round(ctx):
 # Run the bot
 # ---------------------------
 keep_alive()
-bot.run(os.getenv("bot_token"))
+bot.run("MTM1NTUxMDk0ODUyNTM3NTU2OA")
